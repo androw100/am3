@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+
+:root {
+    /* --color1: #f0ebe3;
+    --color2: #e4dccf;
+    --color4: #576f72; */
+
+    --color1: #FE0000;
+    --color2: #7D7463;
+    --color3: #A8A196;
+    --color4: #F4E0B9;
+    --color5: #FF4D00;
+    --color6: #7d9d9c;
+
+}
+
+* {
+    font-family: 'Cairo', sans-serif;
+scroll-behavior: smooth;
+}
+
+/* scrollbar */
+/* width */
+/* ::-webkit-scrollbar {
+    width: 10px;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 50px;
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+    background: var(--color5);
+    border-radius: 5px;
+} */
+
+/********** whatsapp icon **************/
+ .logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+    mix-blend-mode: difference;
+}
+
+.logo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: block;
+    z-index: 200000;
+    transition: all 250ms linear;
+} 
+
+/*--------------- start nav---------------- */
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fac031;
+    border-radius: 15px;
+}
+
+/* end scroll */
+
+/* start loading page */
+
+ .loading {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(46, 45, 45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 106px;
+    height: 56px;
+    display: block;
+    margin: 30px auto;
+    background-image: linear-gradient(#FFF 50px, transparent 0), linear-gradient(#FFF 50px, transparent 0), linear-gradient(#FFF 50px, transparent 0), linear-gradient(#FFF 50px, transparent 0), radial-gradient(circle 14px, #FFF 100%, transparent 0);
+    background-size: 48px 15px, 15px 35px, 15px 35px, 25px 15px, 28px 28px;
+    background-position: 25px 5px, 58px 20px, 25px 17px, 2px 37px, 76px 0px;
+    background-repeat: no-repeat;
+    position: relative;
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+
+.loader::after,
+.loader::before {
+    content: '';
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border: 6px solid #FFF;
+    border-radius: 50%;
+    left: -45px;
+    top: -10px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#FFF 64px, transparent 0), linear-gradient(#FFF 66px, transparent 0), radial-gradient(circle 4px, #FFF 100%, transparent 0);
+    background-size: 40px 1px, 1px 40px, 8px 8px;
+    background-position: center center;
+    box-sizing: border-box;
+    animation: rotation 0.3s linear infinite;
+}
+
+.loader::before {
+    left: 25px;
+    top: 60px;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+/* end loading page */
+
+/* navbar */
+nav img {
+    width: 50px;
+}
+
+nav {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.navbar ul {
+    margin-left: 230px;
+    list-style-type: none;
+}
+
+.navbar ul li a:hover {
+    color: #fac031;
+}
+
+.nav_icon i {
+    position: relative;
+    left: 200px;
+    padding-left: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.nav_icon i:hover {
+    color: #fac031;
+    transition: 0.5s;
+}
+
+.navbar-nav .nav-link.active:hover {
+    color: #fac031;
+}
+
+.nav-link {
+    position: relative;
+    color: black;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.nav-link::after {
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: #fac031;
+    position: absolute;
+    left: 10px;
+    top: 80%;
+}
+
+.nav-link:hover::after {
+    width: 70%;
+    transition: 0.5s;
+}
+
+
+
+/************ end nav ***************/
+
+nav button,
+.section_vedio button,
+.formbutton {
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(30deg, #fac031, var(--color5));
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+}
+
+nav button:hover,
+.section_vedio button:hover,
+.formbutton:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+    0% {
+        box-shadow: 0 0 0 0 #b8da23f3;
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+}
+
+
+/************ start vedio*********************** */
+
+#background-video {
+    width: 99vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: contrast(150%);
+}
+
+.section_vedio h2 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.section_vedio h2 {
+    font-size: 4rem;
+    margin-top: 27vh;
+}
+
+.section_vedio {
+    margin-bottom: 50vh;
+}
+
+.section_vedio button {
+    font-size: 20px;
+}
+
+
+/*************** end vedio **************/
+
+
+
+/********************* start section two********************* */
+
+
+.black {
+    color: #241f1f;
+    font-size: 50px;
+}
+
+.orn {
+    color: var(--color5);
+    font-size: 50px;
+}
+
+.psec2 {
+    color: #241f1f;
+    font-size: 30px;
+}
+
+
+
+
+ul {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    font-weight: bolder;
+    padding: 0;
+}
+
+.image_wrapper {
+    position: relative;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    background: rgba(57, 57, 57, 0.5);
+
+    /* center overlay text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.overlay_4 {
+    left: 0;
+    bottom: 100%;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    backdrop-filter: blur(8px) brightness(80%);
+    transition: all .3s ease-in-out;
+}
+
+.image_wrapper:hover .overlay_4 {
+    bottom: 0;
+    height: 100%;
+}
+
+
+
+
+
+
+.overlay h3 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/*************** end galary *************/
+
+/******** start section three */
+
+.section_three {
+    background-image: url(../image/dark-wooden-texture-surface.jpg);
+
+    /* margin-top: px; */
+    /* height: 35vh; */
+}
+
+.section_three h3 {
+    color: #FFf;
+}
+
+
+/******** start section four */
+
+.myborder1{
+    border-left:var(--color5) solid 5px ;
+    padding-left: 3px;
+}
+.myborder2{
+    border-right:var(--color5) solid 5px ;
+    padding-right: 3px;
+}
+
+
+
+
+
+
+
+.section_five {
+    background-image: url(../image/montage-copy-space-wooden-table-blurred-kids-playroom-background-kindergarten-3d-rendering_67155-18845.avif);
+
+    margin-top: 2px;
+    height: 35vh;
+}
+
+.section_five h3 {
+    color:rgb(35, 33, 33);
+}
+
+.myworks {
+    height: 65vh;
+    width: 100%;
+}
+
+
+footer {
+    background-color: #241f1f;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 50px;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    color: #FFf;
+
+}
+footer h5{
+    color: white;
+}
+
+.whatsapp a:hover {
+    color: #25d366;
+
+}
+
+.face a:hover {
+    color: #1877f2;
+
+}
+
+
+.you a:hover {
+    color: #ff0000;
+
+}
+
+.pin a:hover {
+    color: #e60023;
+
+}
+
+.tweeter a:hover {
+    color: #1da1f2;
+
+}
+
+.linked a:hover {
+    color: #0a66c2;
+
+}
+
+.insta a:hover {
+    background: -webkit-linear-gradient(#5851db, #833ab4, #c13584, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lastsec {
+    height: 50px;
+    background-color: black
+}
+
+@media screen and (max-width:460px) {
+
+    .section_vedio {
+        margin-bottom: 35vh;
+    }
+
+}
+
+@media screen and (max-width:850px) {
+    .myworks {
+        height: 35vh;
+        width: 100%;
+    }
+
+    footer a {
+        font-size: 35px;
+    }
+}
+
+
+
+@media (max-width:992px) {
+    .jnav {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 460px) {}
+
+
+@media only screen and (min-width: 800px) {
+    .grow {
+        flex-grow: 0;
+    }
+}
+
+.collapse {
+    flex-grow: 0;
+
+}
